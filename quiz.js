@@ -4,9 +4,18 @@ const chapters = [
   {
     name: "Chapter 5: Interfaces and Abstract Classes",
     videos: [
-      { title: "Java interface 🦅", url: "https://www.youtube.com/watch?v=GhslBwrRsnw&ab_channel=BroCode" },
-      { title: "Java abstraction 👻", url: "https://www.youtube.com/watch?v=Lvnb83qt57g&ab_channel=BroCode" },
-      { title: "Abstract Classes and Methods in Java Explained in 7 Minutes", url: "https://www.youtube.com/watch?v=HvPlEJ3LHgE&t=1s&ab_channel=CodingwithJohn" }
+      {
+        title: "Java interface 🦅",
+        url: "https://www.youtube.com/watch?v=GhslBwrRsnw&ab_channel=BroCode",
+      },
+      {
+        title: "Java abstraction 👻",
+        url: "https://www.youtube.com/watch?v=Lvnb83qt57g&ab_channel=BroCode",
+      },
+      {
+        title: "Abstract Classes and Methods in Java Explained in 7 Minutes",
+        url: "https://www.youtube.com/watch?v=HvPlEJ3LHgE&t=1s&ab_channel=CodingwithJohn",
+      },
     ],
     questions: [
       {
@@ -88,8 +97,7 @@ const chapters = [
         answer: 1,
       },
       {
-        question:
-          "Which method must be implemented in the following interface?\n\ninterface Walkable {\n  void walk();\n}",
+        question: `Which method must be implemented in the following interface?\`\`\` \n\ninterface Walkable {\n  void walk();\n} \`\`\``,
         options: [
           "No methods",
           "Only if the class is abstract",
@@ -174,7 +182,7 @@ const chapters = [
       },
       {
         question:
-          'What type of class is this?\n\nnew Runnable() {\n  public void run() {\n    System.out.println("Running");\n  }\n};',
+          `What type of class is this?\`\`\`\n\nnew Runnable() {\n  public void run() {\n    System.out.println("Running");\n  }\n};\`\`\``,
         options: [
           "Named subclass of Thread",
           "Lambda expression",
@@ -216,7 +224,7 @@ const chapters = [
       },
       {
         question:
-          "Which of the following is true about class B in this code?\n\ninterface A {\n  void methodA();\n}\nabstract class B implements A {\n  public void methodB() {}\n}",
+          `Which of the following is true about class B in this code?\`\`\` \n\n interface A {\n  void methodA();\n}\nabstract class B implements A {\n  public void methodB() {}\n}\`\`\``,
         options: [
           "Class B must be declared final",
           "Class B must implement methodA()",
@@ -269,8 +277,19 @@ const chapters = [
         answer: 3,
       },
       {
-        question:
-          'What will be the output of this code?\n\ninterface Swimmable {\n  void swim();\n  default void dive() { System.out.println("Diving"); }\n}\nclass Fish implements Swimmable {\n  public void swim() { System.out.println("Swimming"); }\n}\n\nnew Fish().dive();',
+        question: `What will this code output?
+
+\`\`\`
+interface Swimmable {
+  void swim();
+  default void dive() { System.out.println("Diving"); }
+}
+class Fish implements Swimmable {
+  public void swim() { System.out.println("Swimming"); }
+}
+new Fish().dive();
+\`\`\`
+`,
         options: [
           "Compilation error",
           "Swimming",
@@ -279,6 +298,7 @@ const chapters = [
         ],
         answer: 2,
       },
+
       {
         question: "Which statement about inner classes is FALSE?",
         options: [
@@ -302,7 +322,7 @@ const chapters = [
       },
       {
         question:
-          'What is true about this code?\n\nRunnable r = new Runnable() {\n  public void run() {\n    System.out.println("Running!");\n  }\n};',
+          `What is true about this code?\`\`\` \n\nRunnable r = new Runnable() {\n  public void run() {\n    System.out.println("Running!");\n  }\n};\`\`\` `,
         options: [
           "Defines a new class RunnableImpl",
           "Creates a subclass of Thread",
@@ -328,7 +348,10 @@ const chapters = [
   {
     name: "Chapter 6: GUI and Event Handling",
     videos: [
-      { title: "Java GUI Tutorial - Make a GUI in 13 Minutes #9", url: "https://www.youtube.com/watch?v=5o3fMLPY7qY&t=6s&ab_channel=AlexLee" },
+      {
+        title: "Java GUI Tutorial - Make a GUI in 13 Minutes #9",
+        url: "https://www.youtube.com/watch?v=5o3fMLPY7qY&t=6s&ab_channel=AlexLee",
+      },
     ],
     questions: [
       {
@@ -668,304 +691,362 @@ const chapters = [
   {
     name: "Chapter 7: Exceptions and File IO",
     videos: [
-      { title: "Exception Handling in Java Tutorial", url: "https://www.youtube.com/watch?v=1XAfapkBQjk&ab_channel=CodingwithJohn" },
-      { title: "Checked vs. Unchecked Exceptions in Java Tutorial - What's The Difference?", url: "https://www.youtube.com/watch?v=bCPClyGsVhc&ab_channel=CodingwithJohn" },
-      { title: "Java Exception Handling Tutorial", url: "https://www.youtube.com/watch?v=_nmm0nZqIIY&ab_channel=ProgrammingwithMosh" },
-      { title: "Input & Output Streams In Java", url: "https://www.youtube.com/watch?v=e3dFoA4-tqs&ab_channel=SimpliCode" },
-      { title: "Java serialization 🥣", url: "https://www.youtube.com/watch?v=DfbFTVNfkeI&ab_channel=BroCode" },
+      {
+        title: "Exception Handling in Java Tutorial",
+        url: "https://www.youtube.com/watch?v=1XAfapkBQjk&ab_channel=CodingwithJohn",
+      },
+      {
+        title:
+          "Checked vs. Unchecked Exceptions in Java Tutorial - What's The Difference?",
+        url: "https://www.youtube.com/watch?v=bCPClyGsVhc&ab_channel=CodingwithJohn",
+      },
+      {
+        title: "Java Exception Handling Tutorial",
+        url: "https://www.youtube.com/watch?v=_nmm0nZqIIY&ab_channel=ProgrammingwithMosh",
+      },
+      {
+        title: "Input & Output Streams In Java",
+        url: "https://www.youtube.com/watch?v=e3dFoA4-tqs&ab_channel=SimpliCode",
+      },
+      {
+        title: "Java serialization 🥣",
+        url: "https://www.youtube.com/watch?v=DfbFTVNfkeI&ab_channel=BroCode",
+      },
     ],
-    questions: [{
-    question: "What will the following code output?\n\ntry {\n  int a = 5 / 0;\n} catch (ArithmeticException e) {\n  System.out.println(\"Error\");\n}",
-    options: ["0", "No output", "Error", "Compilation error"],
-    answer: 2
-  },
-  {
-    question: "What does the following method signature indicate?\n\npublic void readFile() throws IOException",
-    options: [
-      "The method handles IOExceptions internally",
-      "The method cannot be compiled",
-      "The method declares that it may throw an IOException",
-      "The method must contain a Scanner"
-    ],
-    answer: 2
-  },
-  {
-    question: "Which line will cause a compilation error?\n\ntry {\n  FileInputStream f = new FileInputStream(\"file.txt\");\n} catch (Exception e) {\n  System.out.println(\"Caught\");\n}",
-    options: ["Line with FileInputStream", "Line with try", "Line with catch", "No error, it compiles"],
-    answer: 3
-  },
-  {
-    question: "What happens here?\n\nObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(\"data.ser\"));\nout.writeObject(new Student());",
-    options: ["Object is written to file", "Compilation error", "Object is not written", "Only primitive fields are written"],
-    answer: 0
-  },
-  {
-    question: "What exception does this code throw?\n\nint[] arr = new int[3];\nSystem.out.println(arr[5]);",
-    options: ["NullPointerException", "IOException", "ArrayIndexOutOfBoundsException", "No exception"],
-    answer: 2
-  },
-  {
-    question: "What is printed?\n\nfinally {\n  System.out.println(\"Done\");\n}",
-    options: ["Only if exception occurs", "Only if no exception", "Always prints Done", "Never runs"],
-    answer: 2
-  },
-  {
-    question: "What does the following code do?\n\ncatch (Exception e) {\n  throw e;\n}",
-    options: ["Ignores the error", "Prints the error", "Re-throws the caught exception", "Fixes the error"],
-    answer: 2
-  },
-  {
-    question: "Which line causes an unchecked exception?\n\nString s = null;\ns.length();",
-    options: ["Line 1", "Line 2", "Both lines", "Neither"],
-    answer: 1
-  },
-  {
-    question: "What will be the result?\n\ntry {\n  new FileReader(\"nofile.txt\");\n} catch (IOException e) {\n  System.out.println(\"Caught\");\n}",
-    options: ["File is read", "Nothing happens", "IOException is caught", "FileNotFoundException is missed"],
-    answer: 2
-  },
-  {
-    question: "Which exception must be declared or caught?\n\nObjectInputStream ois = new ObjectInputStream(new FileInputStream(\"file.ser\"));",
-    options: ["RuntimeException", "IOException", "NullPointerException", "IllegalArgumentException"],
-    answer: 1
-  },
+    questions: [
+      {
+        question:
+          `What will the following code output?\`\`\` \n\ntry {\n  int a = 5 / 0;\n} catch (ArithmeticException e) {\n  System.out.println("Error");\n}\`\`\``,
+        options: ["0", "No output", "Error", "Compilation error"],
+        answer: 2,
+      },
+      {
+        question:
+          "What does the following method signature indicate?\`\`\` \n\npublic void readFile() throws IOException \`\`\` ",
+        options: [
+          "The method handles IOExceptions internally",
+          "The method cannot be compiled",
+          "The method declares that it may throw an IOException",
+          "The method must contain a Scanner",
+        ],
+        answer: 2,
+      },
+      {
+        question:
+          'Which line will cause a compilation error?\`\`\` \n\ntry {\n  FileInputStream f = new FileInputStream("file.txt");\n} catch (Exception e) {\n  System.out.println("Caught");\n}\`\`\` ',
+        options: [
+          "Line with FileInputStream",
+          "Line with try",
+          "Line with catch",
+          "No error, it compiles",
+        ],
+        answer: 3,
+      },
+      {
+        question:
+          'What happens here?\`\`\` \n\nObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("data.ser"));\nout.writeObject(new Student()); \`\`\` ',
+        options: [
+          "Object is written to file",
+          "Compilation error",
+          "Object is not written",
+          "Only primitive fields are written",
+        ],
+        answer: 0,
+      },
+      {
+        question:
+          "What exception does this code throw?\`\`\` \n\nint[] arr = new int[3];\nSystem.out.println(arr[5]);\`\`\` ",
+        options: [
+          "NullPointerException",
+          "IOException",
+          "ArrayIndexOutOfBoundsException",
+          "No exception",
+        ],
+        answer: 2,
+      },
+      {
+        question:
+          'What is printed?\`\`\` \n\nfinally {\n  System.out.println("Done");\n}\`\`\` ',
+        options: [
+          "Only if exception occurs",
+          "Only if no exception",
+          "Always prints Done",
+          "Never runs",
+        ],
+        answer: 2,
+      },
+      {
+        question:
+          "What does the following code do?\`\`\` \n\ncatch (Exception e) {\n  throw e;\n}\`\`\` ",
+        options: [
+          "Ignores the error",
+          "Prints the error",
+          "Re-throws the caught exception",
+          "Fixes the error",
+        ],
+        answer: 2,
+      },
+      {
+        question:
+          "Which line causes an unchecked exception?\`\`\` \n\nString s = null;\ns.length();\`\`\` ",
+        options: ["Line 1", "Line 2", "Both lines", "Neither"],
+        answer: 1,
+      },
+      {
+        question:
+          'What will be the result?\`\`\` \n\ntry {\n  new FileReader("nofile.txt");\n} catch (IOException e) {\n  System.out.println("Caught");\n}\`\`\` ',
+        options: [
+          "File is read",
+          "Nothing happens",
+          "IOException is caught",
+          "FileNotFoundException is missed",
+        ],
+        answer: 2,
+      },
+      {
+        question:
+          'Which exception must be declared or caught?\`\`\` \n\nObjectInputStream ois = new ObjectInputStream(new FileInputStream("file.ser"));\`\`\` ',
+        options: [
+          "RuntimeException",
+          "IOException",
+          "NullPointerException",
+          "IllegalArgumentException",
+        ],
+        answer: 1,
+      },
 
-  // 11–20: True/False Questions
-  {
-    question: "The `finally` block is always executed even if an exception is not caught.",
-    options: ["True", "False"],
-    answer: 0
-  },
-  {
-    question: "Only classes that implement Serializable can be written using ObjectOutputStream.",
-    options: ["True", "False"],
-    answer: 0
-  },
-  {
-    question: "The `throw` keyword is used to declare exceptions.",
-    options: ["True", "False"],
-    answer: 1
-  },
-  {
-    question: "A RuntimeException must be declared in a method signature.",
-    options: ["True", "False"],
-    answer: 1
-  },
-  {
-    question: "FileNotFoundException is a checked exception.",
-    options: ["True", "False"],
-    answer: 0
-  },
-  {
-    question: "You can catch multiple exceptions in a single try block.",
-    options: ["True", "False"],
-    answer: 0
-  },
-  {
-    question: "Using try-catch is mandatory for all methods.",
-    options: ["True", "False"],
-    answer: 1
-  },
-  {
-    question: "A transient variable will be skipped during serialization.",
-    options: ["True", "False"],
-    answer: 0
-  },
-  {
-    question: "You can use Scanner to read binary files.",
-    options: ["True", "False"],
-    answer: 1
-  },
-  {
-    question: "IOException is a subclass of Exception.",
-    options: ["True", "False"],
-    answer: 0
-  },
+      // 11–20: True/False Questions
+      {
+        question:
+          "The `finally` block is always executed even if an exception is not caught.",
+        options: ["True", "False"],
+        answer: 0,
+      },
+      {
+        question:
+          "Only classes that implement Serializable can be written using ObjectOutputStream.",
+        options: ["True", "False"],
+        answer: 0,
+      },
+      {
+        question: "The `throw` keyword is used to declare exceptions.",
+        options: ["True", "False"],
+        answer: 1,
+      },
+      {
+        question: "A RuntimeException must be declared in a method signature.",
+        options: ["True", "False"],
+        answer: 1,
+      },
+      {
+        question: "FileNotFoundException is a checked exception.",
+        options: ["True", "False"],
+        answer: 0,
+      },
+      {
+        question: "You can catch multiple exceptions in a single try block.",
+        options: ["True", "False"],
+        answer: 0,
+      },
+      {
+        question: "Using try-catch is mandatory for all methods.",
+        options: ["True", "False"],
+        answer: 1,
+      },
+      {
+        question: "A transient variable will be skipped during serialization.",
+        options: ["True", "False"],
+        answer: 0,
+      },
+      {
+        question: "You can use Scanner to read binary files.",
+        options: ["True", "False"],
+        answer: 1,
+      },
+      {
+        question: "IOException is a subclass of Exception.",
+        options: ["True", "False"],
+        answer: 0,
+      },
 
-  // 21–30: Conceptual Multiple-Choice Questions
-  {
-    question: "Which of the following is a superclass of all exceptions?",
-    options: ["Exception", "Throwable", "RuntimeException", "Object"],
-    answer: 1
-  },
-  {
-    question: "What is the purpose of the 'throws' keyword?",
-    options: [
-      "To catch exceptions",
-      "To declare that a method may throw exceptions",
-      "To write exception messages",
-      "To suppress exceptions"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which of the following is NOT a checked exception?",
-    options: ["IOException", "FileNotFoundException", "NullPointerException", "ClassNotFoundException"],
-    answer: 2
-  },
-  {
-    question: "What does an ObjectInputStream do?",
-    options: [
-      "Reads text from the console",
-      "Writes data to a text file",
-      "Reads serialized objects from a stream",
-      "Encrypts Java objects"
-    ],
-    answer: 2
-  },
-  {
-    question: "Which of the following can be used to append to a file?",
-    options: [
-      "Scanner",
-      "PrintStream(new FileOutputStream(file, true))",
-      "BufferedReader",
-      "ObjectOutputStream"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which exception is thrown when you cast an object to an incompatible class?",
-    options: [
-      "IOException",
-      "ClassCastException",
-      "NullPointerException",
-      "ArithmeticException"
-    ],
-    answer: 1
-  },
-  {
-    question: "What does 'transient' mean for a class field?",
-    options: [
-      "The field will be saved in binary",
-      "The field will be skipped during serialization",
-      "The field is constant",
-      "The field is public"
-    ],
-    answer: 1
-  },
-  {
-    question: "Which method is used to write an object to a file?",
-    options: [
-      "writeData()",
-      "write()",
-      "writeObject()",
-      "writeLine()"
-    ],
-    answer: 2
-  },
-  {
-    question: "Which file type is NOT readable using Scanner?",
-    options: [
-      ".txt",
-      ".csv",
-      ".jpg",
-      ".java"
-    ],
-    answer: 2
-  },
-  {
-    question: "If an exception is not caught, what happens?",
-    options: [
-      "It is ignored",
-      "It causes compile-time error",
-      "It is passed up the call stack",
-      "It stops the program silently"
-    ],
-    answer: 2
-  },
-{
-    question: `What does the following code do?
+      // 21–30: Conceptual Multiple-Choice Questions
+      {
+        question: "Which of the following is a superclass of all exceptions?",
+        options: ["Exception", "Throwable", "RuntimeException", "Object"],
+        answer: 1,
+      },
+      {
+        question: "What is the purpose of the 'throws' keyword?",
+        options: [
+          "To catch exceptions",
+          "To declare that a method may throw exceptions",
+          "To write exception messages",
+          "To suppress exceptions",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which of the following is NOT a checked exception?",
+        options: [
+          "IOException",
+          "FileNotFoundException",
+          "NullPointerException",
+          "ClassNotFoundException",
+        ],
+        answer: 2,
+      },
+      {
+        question: "What does an ObjectInputStream do?",
+        options: [
+          "Reads text from the console",
+          "Writes data to a text file",
+          "Reads serialized objects from a stream",
+          "Encrypts Java objects",
+        ],
+        answer: 2,
+      },
+      {
+        question: "Which of the following can be used to append to a file?",
+        options: [
+          "Scanner",
+          "PrintStream(new FileOutputStream(file, true))",
+          "BufferedReader",
+          "ObjectOutputStream",
+        ],
+        answer: 1,
+      },
+      {
+        question:
+          "Which exception is thrown when you cast an object to an incompatible class?",
+        options: [
+          "IOException",
+          "ClassCastException",
+          "NullPointerException",
+          "ArithmeticException",
+        ],
+        answer: 1,
+      },
+      {
+        question: "What does 'transient' mean for a class field?",
+        options: [
+          "The field will be saved in binary",
+          "The field will be skipped during serialization",
+          "The field is constant",
+          "The field is public",
+        ],
+        answer: 1,
+      },
+      {
+        question: "Which method is used to write an object to a file?",
+        options: ["writeData()", "write()", "writeObject()", "writeLine()"],
+        answer: 2,
+      },
+      {
+        question: "Which file type is NOT readable using Scanner?",
+        options: [".txt", ".csv", ".jpg", ".java"],
+        answer: 2,
+      },
+      {
+        question: "If an exception is not caught, what happens?",
+        options: [
+          "It is ignored",
+          "It causes compile-time error",
+          "It is passed up the call stack",
+          "It stops the program silently",
+        ],
+        answer: 2,
+      },
+      {
+        question: `What does the following code do?
 
-File file = new File("notes.txt");
+\`\`\` File file = new File("notes.txt");
 if (file.exists()) {
   System.out.println("File exists");
-}`,
-    options: [
-      "Deletes the file",
-      "Checks if 'notes.txt' exists",
-      "Creates a new file",
-      "Throws an exception if file not found"
-    ],
-    answer: 1
-  },
-  {
-    question: `What will this code output if 'data.txt' exists?
-
+}\`\`\` `,
+        options: [
+          "Deletes the file",
+          "Checks if 'notes.txt' exists",
+          "Creates a new file",
+          "Throws an exception if file not found",
+        ],
+        answer: 1,
+      },
+      {
+        question: `What will this code output if 'data.txt' exists?
+\`\`\` 
 Scanner input = new Scanner(new File("data.txt"));
-System.out.println(input.nextLine());`,
-    options: [
-      "The first line of data.txt",
-      "An exception is thrown",
-      "It skips all lines",
-      "Nothing"
-    ],
-    answer: 0
-  },
-  {
-    question: `Which line enables appending to a file?
+System.out.println(input.nextLine());\`\`\` `,
+        options: [
+          "The first line of data.txt",
+          "An exception is thrown",
+          "It skips all lines",
+          "Nothing",
+        ],
+        answer: 0,
+      },
+      {
+        question: `Which line enables appending to a file?
 
-FileOutputStream fos = new FileOutputStream("log.txt", ___);`,
-    options: [
-      "false",
-      "null",
-      "true",
-      "append"
-    ],
-    answer: 2
-  },
-  {
-    question: `Which output stream is used to write objects?
-
+\`\`\` FileOutputStream fos = new FileOutputStream("log.txt", ___);\`\`\` `,
+        options: ["false", "null", "true", "append"],
+        answer: 2,
+      },
+      {
+        question: `Which output stream is used to write objects?
+\`\`\` 
 _____ out = new _____("object.dat");
-out.writeObject(new Student());`,
-    options: [
-      "FileWriter",
-      "PrintStream",
-      "ObjectOutputStream",
-      "BufferedWriter"
-    ],
-    answer: 2
-  },
-  {
-    question: `What is missing in this code?
+out.writeObject(new Student()); \`\`\` `,
+        options: [
+          "FileWriter",
+          "PrintStream",
+          "ObjectOutputStream",
+          "BufferedWriter",
+        ],
+        answer: 2,
+      },
+      {
+        question: `What is missing in this code?
 
-ObjectInputStream in = new ObjectInputStream(new FileInputStream("obj.dat"));
-Student s = (Student) in.readObject();`,
-    options: [
-      "ClassNotFoundException and IOException must be caught or declared",
-      "It must implement Runnable",
-      "Use PrintStream not ObjectInputStream",
-      "Nothing is missing"
-    ],
-    answer: 0
-  },
+\`\`\` ObjectInputStream in = new ObjectInputStream(new FileInputStream("obj.dat"));
+Student s = (Student) in.readObject();\`\`\` `,
+        options: [
+          "ClassNotFoundException and IOException must be caught or declared",
+          "It must implement Runnable",
+          "Use PrintStream not ObjectInputStream",
+          "Nothing is missing",
+        ],
+        answer: 0,
+      },
 
-  // True/False
-  {
-    question: "PrintStream is used to write human-readable text to a file.",
-    options: ["True", "False"],
-    answer: 0
-  },
-  {
-    question: "You must use FileReader to write data to a file.",
-    options: ["True", "False"],
-    answer: 1
-  },
-  {
-    question: "ObjectOutputStream can write any object, even if it doesn't implement Serializable.",
-    options: ["True", "False"],
-    answer: 1
-  },
-  {
-    question: "Binary files are not readable with Scanner.",
-    options: ["True", "False"],
-    answer: 0
-  },
-  {
-    question: "You can use BufferedReader to read text from a file line by line.",
-    options: ["True", "False"],
-    answer: 0
-  }],
+      // True/False
+      {
+        question: "PrintStream is used to write human-readable text to a file.",
+        options: ["True", "False"],
+        answer: 0,
+      },
+      {
+        question: "You must use FileReader to write data to a file.",
+        options: ["True", "False"],
+        answer: 1,
+      },
+      {
+        question:
+          "ObjectOutputStream can write any object, even if it doesn't implement Serializable.",
+        options: ["True", "False"],
+        answer: 1,
+      },
+      {
+        question: "Binary files are not readable with Scanner.",
+        options: ["True", "False"],
+        answer: 0,
+      },
+      {
+        question:
+          "You can use BufferedReader to read text from a file line by line.",
+        options: ["True", "False"],
+        answer: 0,
+      },
+    ],
   },
   { name: "Chapter 8", videos: [], questions: [] },
 ];
@@ -1018,22 +1099,21 @@ function startChapterQuiz(chapterIdx) {
   const videos = chapters[chapterIdx].videos || [];
   if (videos.length > 0) {
     videoRowHtml = `<div id='chapter-videos-row-container' style='width:100%;margin-top:36px;'>
-      <div style='font-size:1.15em;font-weight:600;color:#2563eb;margin-bottom:10px;text-align:left;'>YouTube Videos that helped me!</div>
+      <div style='font-size:1.15em;font-weight:600;color:#059669;margin-bottom:10px;text-align:left;'>YouTube Videos that helped me!</div>
       <div id='chapter-videos-row' style='display:flex;flex-direction:row;flex-wrap:nowrap;gap:24px;overflow-x:auto;padding-bottom:8px;'>
         ${videos
-          .map(
-            (v) => {
-              // Extract YouTube video ID
-              const match = v.url.match(/[?&]v=([^&#]+)/) || v.url.match(/youtu.be\/(.+)$/);
-              const vid = match ? match[1] : "";
-              return `<div style='flex:0 0 340px;min-width:320px;max-width:420px;display:flex;flex-direction:column;align-items:center;background:#f8fafc;border-radius:10px;padding:10px 8px;'>
+          .map((v) => {
+            // Extract YouTube video ID
+            const match =
+              v.url.match(/[?&]v=([^&#]+)/) || v.url.match(/youtu.be\/(.+)$/);
+            const vid = match ? match[1] : "";
+            return `<div style='flex:0 0 340px;min-width:320px;max-width:420px;display:flex;flex-direction:column;align-items:center;background:#f8fafc;border-radius:10px;padding:10px 8px;'>
                 <div style='font-size:1em;font-weight:500;margin-bottom:8px;text-align:center;'>${v.title}</div>
                 <div style='aspect-ratio:16/9;width:100%;background:#eee;border-radius:8px;overflow:hidden;'>
                   <iframe width='100%' height='100%' src='https://www.youtube.com/embed/${vid}' frameborder='0' allowfullscreen style='border:0;width:100%;height:100%;'></iframe>
                 </div>
               </div>`;
-            }
-          )
+          })
           .join("")}
       </div>
     </div>`;
@@ -1046,7 +1126,7 @@ function startChapterQuiz(chapterIdx) {
     <div id="feedback"></div>
     ${videoRowHtml}
   `;
-  document.getElementById('back-to-chapters').onclick = showHomePage;
+  document.getElementById("back-to-chapters").onclick = showHomePage;
   showQuestion();
 }
 
@@ -1064,33 +1144,73 @@ function updateScoreboard() {
   scoreboard.textContent = `Score: ${score} / ${questions.length}`;
 }
 
+function renderQuestionWithCode(questionText) {
+  // Detect code block (```...``` or indented)
+  const codeBlockRegex = /```([\s\S]*?)```/g;
+  let html = questionText.replace(codeBlockRegex, (match, code) => {
+    return `<pre class="code-block"><code>${escapeHtml(
+      code.trim()
+    )}</code></pre>`;
+  });
+  return html;
+}
+
+function escapeHtml(text) {
+  const map = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  };
+  return text.replace(/[&<>"']/g, (m) => map[m]);
+}
+
 function showQuestion() {
   const q = questions[currentQuestion];
   updateScoreboard();
-  // Show question number with the question
-  document.getElementById("question").innerHTML = `<span style='color:#2563eb;font-weight:bold;'>Q${currentQuestion + 1}.</span> ` + q.question;
+  document.getElementById("question").innerHTML =
+    `<span style='color:var(--primary);font-weight:bold;'>Q${
+      currentQuestion + 1
+    }.</span> ` + renderQuestionWithCode(q.question);
   const optionsDiv = document.getElementById("options");
   optionsDiv.innerHTML = "";
   q.options.forEach((opt, idx) => {
     const btn = document.createElement("button");
     btn.textContent = opt;
-    btn.onclick = () => checkAnswer(idx);
     btn.className = "option-btn";
+    btn.onclick = () => checkAnswer(idx, btn);
     optionsDiv.appendChild(btn);
   });
   document.getElementById("feedback").textContent = "";
 }
 
-function checkAnswer(selected) {
+function checkAnswer(selected, btnEl) {
   const q = questions[currentQuestion];
   const feedback = document.getElementById("feedback");
+  const optionButtons = Array.from(document.querySelectorAll("#options .option-btn"));
+  // Disable all buttons after answer
+  optionButtons.forEach((b) => (b.disabled = true));
   if (selected === q.answer) {
     score++;
     feedback.textContent = "Correct!";
     feedback.style.color = "#15803d"; // green
+    btnEl.style.background = "#d1fae5";
+    btnEl.style.borderColor = "#15803d";
+    btnEl.style.color = "#15803d";
+    btnEl.style.fontWeight = "bold";
   } else {
     feedback.textContent = "Wrong!";
     feedback.style.color = "#b91c1c"; // red
+    btnEl.style.background = "#fee2e2";
+    btnEl.style.borderColor = "#b91c1c";
+    btnEl.style.color = "#b91c1c";
+    btnEl.style.fontWeight = "bold";
+    // Highlight correct answer
+    optionButtons[q.answer].style.background = "#d1fae5";
+    optionButtons[q.answer].style.borderColor = "#15803d";
+    optionButtons[q.answer].style.color = "#15803d";
+    optionButtons[q.answer].style.fontWeight = "bold";
     wrongAnswers.push({
       index: currentQuestion,
       question: q.question,
@@ -1113,13 +1233,14 @@ function checkAnswer(selected) {
 
 function showResult() {
   let html = `<h2>Quiz Complete!</h2><p>Your score: ${score} / ${questions.length}</p>`;
-  html += `<button id="reviewBtn" class="option-btn" style="background:#f7cfcf;">Review Your Answers</button>`;
+  html += `<button id="reviewBtn" class="chapter-btn" style="">Review Your Answers</button>`;
   document.getElementById("quiz").innerHTML = html;
   document.getElementById("reviewBtn").onclick = showReviewGrid;
 }
 
 function showReviewGrid() {
-  let html = `<h2>Review Your Answers</h2><div id='review-container' style='display:flex;gap:32px;'>`;
+  let html = `<button id="back-to-chapters" class="option-btn" style="width:auto;max-width:180px;margin-bottom:18px;">← Back to Chapters</button>`;
+  html += `<h2>Review Your Answers</h2><div id='review-container' style='display:flex;gap:32px;'>`;
   // Left: question/answer detail, Right: grid
   html += `<div id='review-detail' style='flex:2;min-width:0;'></div>`;
   html += `<div id='review-grid' style='flex:1;min-width:120px;display:flex;flex-direction:column;align-items:center;'>`;
@@ -1135,6 +1256,7 @@ function showReviewGrid() {
   }
   html += `</div></div></div>`;
   document.getElementById("quiz").innerHTML = html;
+  document.getElementById("back-to-chapters").onclick = showHomePage;
   // Add click listeners
   document.querySelectorAll(".review-q-btn").forEach((btn) => {
     btn.onclick = function () {

@@ -4,207 +4,220 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CP2 Revision</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
-      background: #f4f8fb;
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
+    :root {
+      --primary: #0f766e;
+      --light: #f9f9f9;
+      --gray: #e5e7eb;
+      --dark: #1e293b;
+      --green: #059669;
+      --red: #dc2626;
     }
-    #quiz {
-      max-width: 540px;
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--light);
+      color: var(--dark);
+    }
+        #quiz {
+            display: flex;
+            flex-direction: column;
+      max-width: 680px;
       margin: 48px auto;
       background: #fff;
       border-radius: 12px;
       box-shadow: 0 2px 12px #b3c6e0;
-      padding: 32px 28px 28px 28px;
-      position: relative;
+      padding: 32px;
       border: 1px solid #dbeafe;
     }
     h1 {
       text-align: center;
-      color: #2563eb;
-      letter-spacing: 1px;
-      margin-bottom: 18px;
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    h2 {
+      text-align: center;
+    }
+    header {
+      background-color: #fff;
+      border-bottom: 1px solid var(--gray);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    #quiz {
+      max-width: 960px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.05);
+      display: flex;
+      gap: 3rem;
+    }
+    #main-content {
+      flex: 3;
+    }
+    #sidebar {
+      flex: 1;
+      border-left: 1px solid var(--gray);
+      padding-left: 2rem;
     }
     #scoreboard {
-      font-size: 1.1em;
-      color: #2563eb;
-      margin-bottom: 14px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--green);
       text-align: right;
-      font-weight: bold;
+      /* margin-bottom: 1rem; */
     }
     #question {
-      font-size: 1.15em;
-      margin-bottom: 18px;
-      color: #1e293b;
-      font-weight: 500;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
     }
-    .option-btn {
-      display: block;
-      width: 100%;
-      margin: 10px 0;
-      padding: 12px 0;
-      font-size: 1em;
-      border: 1px solid #dbeafe;
-      border-radius: 6px;
-      background: #eaf3fb;
-      color: #1e293b;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background 0.2s, border 0.2s;
-      box-shadow: none;
-    }
-    .option-btn:hover {
-      background: #dbeafe;
-      border: 1px solid #60a5fa;
-    }
-    #feedback {
-      margin-top: 14px;
-      font-weight: bold;
-      font-size: 1.2em;
-      color: #b91c1c;
-      min-height: 24px;
-    }
-    .wrong-question {
-      background: #f1f5f9;
-      border-left: 4px solid #e57373;
-      margin-bottom: 20px;
-      padding: 12px 16px;
-      border-radius: 7px;
-      box-shadow: none;
-    }
-    .wrong-question b {
-      color: #b91c1c;
-    }
-    .option-btn[style*="background:#f7cfcf"] {
-      background: #f7cfcf !important;
-      color: #b91c1c;
-      border: 1px solid #e57373;
-    }
-    .option-btn[onclick*="location.reload"] {
-      background: #eaf3fb;
-      color: #1e293b;
-      border: 1px solid #dbeafe;
-      margin-top: 18px;
-    }
-    #chapter-select {
-      text-align: center;
-      margin-top: 30px;
-    }
+
     #chapter-btns {
       display: flex;
-      flex-wrap: wrap;
       flex-direction: column;
+      flex-wrap: wrap;
       gap: 18px;
       justify-content: center;
-      margin-top: 18px;
+      margin-top: 24px;
     }
     .chapter-btn {
       background: #eaf3fb;
-      color: #2563eb;
+      color: var(--primary);
       border: 1px solid #dbeafe;
       border-radius: 8px;
       font-size: 1.1em;
       font-weight: bold;
-      padding: 16px 28px;
+      padding: 14px 24px;
       cursor: pointer;
-      box-shadow: none;
       transition: background 0.2s, border 0.2s;
     }
     .chapter-btn:hover {
-      background: #dbeafe;
-      color: #1e293b;
-      border: 1px solid #60a5fa;
+      background: var(--gray);
+      color: var(--dark);
+      border-color: var(--primary);
     }
-    #review-container {
+
+    .option-btn {
+      display: block;
+      width: 100%;
+      padding: 0.75rem 1rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      border: 1px solid var(--gray);
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+      text-align: left;
+      transition: border 0.2s, background 0.2s;
+    }
+    .option-btn:hover {
+      border-color: var(--primary);
+      background-color: #ecfdf5;
+    }
+    #feedback {
+      min-height: 1.5rem;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--red);
+      margin-top: 0.5rem;
+    }
+    #sidebar h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.75rem;
+    }
+    .question-nav {
       display: flex;
-      gap: 32px;
-      margin-top: 18px;
+      flex-wrap: wrap;
+      gap: 0.5rem;
     }
-    #review-detail {
-      flex: 2;
-      min-width: 0;
-    }
-    #review-grid {
-      flex: 1;
-      min-width: 120px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    #review-grid > div:first-child {
-      font-weight: bold;
-      margin-bottom: 10px;
-      color: #2d3a4a;
-    }
-    #review-grid .review-q-btn {
+    .question-nav button {
       width: 36px;
       height: 36px;
+      border: 1px solid var(--gray);
+      background: white;
       border-radius: 50%;
-      border: 1.5px solid #2563eb;
-      background: #eaf3fb;
       font-weight: bold;
-      color: #2563eb;
-      font-size: 1.1em;
       cursor: pointer;
-      margin-bottom: 0;
-      margin-right: 0;
-      margin-left: 0;
-      margin-top: 0;
-      box-shadow: none;
-      transition: border 0.2s, color 0.2s;
-      position: relative;
-      outline: none;
+      transition: all 0.2s;
     }
-    #review-grid .review-q-btn[style*='#e57373'] {
-      border: 1.5px solid #e57373 !important;
-      color: #e57373 !important;
+    .question-nav button.active {
+      background-color: #ecfdf5;
+      border-color: var(--primary);
+      color: var(--primary);
     }
-    #review-grid .review-q-btn.selected {
-      box-shadow: 0 0 0 2px #dbeafe;
-      border-width: 2px;
+    footer {
+      margin-top: 4rem;
+      background: #0f172a;
+      color: white;
+      padding: 2rem;
+      text-align: center;
     }
-    .review-question-box {
-      background: #eaf3fb;
-      padding: 18px 18px 10px 18px;
-      border-radius: 8px;
-      box-shadow: none;
-      min-height: 120px;
+    .code-block {
+      background: #f3f4f6;
+      border-radius: 7px;
+      padding: 12px 14px;
+      margin: 12px 0 8px 0;
+      font-family: 'Fira Mono', 'Consolas', 'Menlo', monospace;
+      font-size: 0.98em;
+      color: #334155;
+      overflow-x: auto;
+      border: 1px solid #e5e7eb;
     }
-    .review-correct {
-      color: #15803d !important;
-      font-size: 1.15em;
-      font-weight: bold;
-      margin-top: 12px;
-    }
-    .review-wrong {
-      color: #b91c1c !important;
-      font-size: 1.15em;
-      font-weight: bold;
-      margin-top: 12px;
-    }
-    @media (max-width: 600px) {
-      #quiz { padding: 16px 4vw; }
-      h1 { font-size: 1.3em; }
-      #question { font-size: 1em; }
-      .option-btn { font-size: 0.98em; }
-    }
-    @media (max-width: 800px) {
-      #review-container { flex-direction: column; gap: 10px; }
-      #review-grid { flex-direction: row; justify-content: center; min-width: 0; }
-      #review-grid > div:last-child { display: flex; flex-wrap: wrap; gap: 8px; }
+    @media (max-width: 768px) {
+      #quiz {
+        flex-direction: column;
+        padding: 1.5rem;
+      }
+      #sidebar {
+        border-left: none;
+        padding-left: 0;
+      }
     }
   </style>
 </head>
 <body>
+  <header>
+    <div style="font-weight: bold; font-size: 1.2rem; color: var(--primary);">CP2 Revision</div>
+    <div>Welcome!</div>
+  </header>
   <div id="quiz">
-    <h1>CP2 Revision</h1>
-    <div id="question"></div>
-    <div id="options"></div>
-    <div id="feedback"></div>
+    <div id="main-content">
+      <div id="scoreboard"></div>
+      <div id="question"></div>
+      <div id="options"></div>
+      <div id="feedback"></div>
+    </div>
+    <aside id="sidebar">
+      <h3>Quiz Questions</h3>
+      <div class="question-nav" id="review-grid"></div>
+    </aside>
   </div>
+  <footer>
+    <p>Cause I don't want to study lol</p>
+    <p>Created by <a href="https://github.com/zeemohamed7/">Zainab Mohamed</a></p>
+  </footer>
   <script src="quiz.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new MutationObserver(() => {
+        const grid = document.querySelectorAll(".question-nav button");
+        grid.forEach((btn, idx) => {
+          btn.classList.toggle("active", idx === window.currentQuestion);
+        });
+      });
+      const targetNode = document.getElementById("question");
+      if (targetNode) observer.observe(targetNode, { childList: true });
+    });
+  </script>
 </body>
 </html>
