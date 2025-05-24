@@ -1067,7 +1067,7 @@ function shuffle(array) {
 
 function showHomePage() {
   document.getElementById("quiz").innerHTML = `
-    <h1>CP2 Revision</h1>
+    <h1>Computer Programming 2 Revision</h1>
     <div id="chapter-select">
       <h2>Select a Chapter</h2>
       <div id="chapter-btns">
