@@ -1048,7 +1048,296 @@ Student s = (Student) in.readObject();\`\`\` `,
       },
     ],
   },
-  { name: "Chapter 8", videos: [], questions: [] },
+  { name: "Chapter 8: Java Collection Classes", videos: [], questions: [  {
+    question: "Which of the following collections maintains insertion order **and** does not allow duplicates?",
+    options: [
+      "HashSet",
+      "LinkedHashSet",
+      "TreeSet",
+      "ArrayList"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which is true about the Java Collections Framework?",
+    options: [
+      "All collection types extend the Collection interface",
+      "Map is a subtype of Collection",
+      "Set is a subtype of Map",
+      "Map is part of the Collections Framework but does not implement Collection"
+    ],
+    answer: 3
+  },
+  {
+    question: "Which of the following statements is TRUE about generics in Java collections?",
+    options: [
+      "They prevent all runtime type errors",
+      "They allow you to store primitive types directly",
+      "They ensure compile-time type safety",
+      "They make classes abstract"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which implementation would be best suited for a collection that requires fast insertion and deletion from both ends?",
+    options: [
+      "ArrayList",
+      "HashSet",
+      "LinkedList",
+      "TreeSet"
+    ],
+    answer: 2
+  },
+  {
+    question: "What would be the output of this code?\n\n```\nSet<String> set = new TreeSet<>();\nset.add(\"banana\");\nset.add(\"apple\");\nset.add(\"apple\");\nSystem.out.println(set);\n```",
+    options: [
+      "[banana, apple, apple]",
+      "[banana, apple]",
+      "[apple, banana]",
+      "[apple, apple, banana]"
+    ],
+    answer: 2
+  },
+  {
+    question: "What kind of ordering does TreeMap guarantee?",
+    options: [
+      "Insertion order",
+      "No specific order",
+      "Key-based natural ordering or custom comparator",
+      "Value-based sorting"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which method is NOT part of the Map interface?",
+    options: [
+      "put()",
+      "containsKey()",
+      "add()",
+      "entrySet()"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of the following interfaces is NOT extended by the Collection interface?",
+    options: [
+      "Set",
+      "List",
+      "Map",
+      "Queue"
+    ],
+    answer: 2
+  },
+  {
+    question: "You want a sorted collection that automatically removes duplicates. What should you use?",
+    options: [
+      "ArrayList",
+      "TreeSet",
+      "HashMap",
+      "Vector"
+    ],
+    answer: 1
+  },
+  {
+    question: `What is the output?
+
+\`\`\`
+List<String> list = new ArrayList<>();
+list.add("A");
+list.add("B");
+list.add(1, "C");
+System.out.println(list);
+\`\`\``,
+    options: [
+      "[A, B, C]",
+      "[A, C, B]",
+      "[C, A, B]",
+      "[B, A, C]"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which data structure would you use if you need to store key-value pairs and quickly retrieve values by key, but you don't care about order?",
+    options: [
+      "TreeMap",
+      "HashMap",
+      "LinkedHashMap",
+      "HashSet"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which method in the Collection interface removes all elements?",
+    options: [
+      "deleteAll()",
+      "remove()",
+      "clear()",
+      "reset()"
+    ],
+    answer: 2
+  },
+  {
+    question: "Why would using raw types (e.g. List list = new ArrayList();) be dangerous?",
+    options: [
+      "They disable polymorphism",
+      "They allow adding any object type, increasing runtime errors",
+      "They cannot be cast to specific types",
+      "They are not compatible with for-each loops"
+    ],
+    answer: 1
+  },
+  {
+    question: "If you wanted a map that keeps keys sorted automatically, which would you choose?",
+    options: [
+      "HashMap",
+      "TreeMap",
+      "LinkedHashMap",
+      "EnumMap"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of the following allows duplicate keys?",
+    options: [
+      "HashMap",
+      "TreeMap",
+      "LinkedHashMap",
+      "None of the above"
+    ],
+    answer: 3
+  },
+{
+    question: "Which of the following will throw a `NullPointerException`?",
+    options: [
+      "new ArrayList<String>().add(null);",
+      "new TreeSet<String>().add(null);",
+      "new LinkedList<String>().add(null);",
+      "new HashSet<String>().add(null);"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which of these will maintain the order in which elements were added AND allow duplicates?",
+    options: [
+      "HashSet",
+      "TreeSet",
+      "ArrayList",
+      "LinkedHashSet"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of the following is true about `HashMap`?",
+    options: [
+      "It maintains insertion order",
+      "It does not allow null keys or values",
+      "Keys are hashed to determine their storage location",
+      "Values are stored in a tree structure"
+    ],
+    answer: 2
+  },
+  {
+    question: "What is the output of this code?\n\n```\nMap<String, String> map = new HashMap<>();\nmap.put(null, \"value1\");\nmap.put(null, \"value2\");\nSystem.out.println(map.get(null));\n```",
+    options: [
+      "value1",
+      "value2",
+      "null",
+      "Compilation error"
+    ],
+    answer: 1
+  },
+  {
+    question: "Which data structure is best if you need to ensure elements are **unique**, but also need **fast lookup**?",
+    options: [
+      "ArrayList",
+      "TreeSet",
+      "LinkedList",
+      "HashSet"
+    ],
+    answer: 3
+  },
+  {
+    question: "Which method is used to retrieve all values from a `Map`?",
+    options: [
+      "getKeys()",
+      "getValues()",
+      "entrySet()",
+      "values()"
+    ],
+    answer: 3
+  },
+  {
+    question: "What happens if you add the same key twice to a `HashMap`?",
+    options: [
+      "It throws an exception",
+      "The map allows it and stores both",
+      "The value is updated",
+      "The second insert is ignored"
+    ],
+    answer: 2
+  },
+  {
+    question: "What’s the difference between `HashMap` and `Hashtable`?",
+    options: [
+      "Hashtable allows null keys",
+      "HashMap is thread-safe",
+      "Hashtable is synchronized by default",
+      "HashMap is faster and synchronized"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of these interfaces allows elements to be accessed using a key?",
+    options: [
+      "Set",
+      "List",
+      "Map",
+      "Queue"
+    ],
+    answer: 2
+  },
+{
+  question: "What’s the output? ``` Set set = new LinkedHashSet<>(); set.add(\"C\"); set.add(\"B\"); set.add(\"A\"); System.out.println(set); ```",
+  options: [
+    "[A, B, C]",
+    "[C, B, A]",
+    "[B, A, C]",
+    "[A, C, B]"
+  ],
+  answer: 1
+},
+  {
+    question: "Which of the following allows fast lookup and keeps insertion order?",
+    options: [
+      "HashMap",
+      "TreeMap",
+      "LinkedHashMap",
+      "EnumMap"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of the following methods is used to get both the key and value in a Map together?",
+    options: [
+      "values()",
+      "keySet()",
+      "entrySet()",
+      "allPairs()"
+    ],
+    answer: 2
+  },
+  {
+    question: "Which of these is true about `TreeSet`?",
+    options: [
+      "It allows null elements",
+      "It sorts the elements based on their hash code",
+      "It stores elements in natural or custom sorted order",
+      "It allows duplicate values"
+    ],
+    answer: 2
+  },
+
+] },
 ];
 
 let questions = [];
@@ -1228,7 +1517,7 @@ function checkAnswer(selected, btnEl) {
     } else {
       showResult();
     }
-  }, 800);
+  }, 1000);
 }
 
 function showResult() {
