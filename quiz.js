@@ -326,10 +326,9 @@ const chapters = [
   },
 
   {
-    name: "Chapter 6: Java GUI and Event Handling",
+    name: "Chapter 6: GUI and Event Handling",
     videos: [
-      { title: "Java Swing GUI Tutorial", url: "https://www.youtube.com/watch?v=Kmgo00avvEw" },
-      { title: "Event Handling in Java", url: "https://www.youtube.com/watch?v=5o3fMLPY7qY" }
+      { title: "Java GUI Tutorial - Make a GUI in 13 Minutes #9", url: "https://www.youtube.com/watch?v=5o3fMLPY7qY&t=6s&ab_channel=AlexLee" },
     ],
     questions: [
       {
@@ -667,10 +666,13 @@ const chapters = [
     ],
   },
   {
-    name: "Chapter 7",
+    name: "Chapter 7: Exceptions and File IO",
     videos: [
-      { title: "Java Exceptions and File IO", url: "https://www.youtube.com/watch?v=3u1fu6f8Hto" },
-      { title: "Serialization in Java", url: "https://www.youtube.com/watch?v=9UEHPiK53BA" }
+      { title: "Exception Handling in Java Tutorial", url: "https://www.youtube.com/watch?v=1XAfapkBQjk&ab_channel=CodingwithJohn" },
+      { title: "Checked vs. Unchecked Exceptions in Java Tutorial - What's The Difference?", url: "https://www.youtube.com/watch?v=bCPClyGsVhc&ab_channel=CodingwithJohn" },
+      { title: "Java Exception Handling Tutorial", url: "https://www.youtube.com/watch?v=_nmm0nZqIIY&ab_channel=ProgrammingwithMosh" },
+      { title: "Input & Output Streams In Java", url: "https://www.youtube.com/watch?v=e3dFoA4-tqs&ab_channel=SimpliCode" },
+      { title: "Java serialization 🥣", url: "https://www.youtube.com/watch?v=DfbFTVNfkeI&ab_channel=BroCode" },
     ],
     questions: [{
     question: "What will the following code output?\n\ntry {\n  int a = 5 / 0;\n} catch (ArithmeticException e) {\n  System.out.println(\"Error\");\n}",
