@@ -2,7 +2,12 @@
 // CHAPTER DATA
 const chapters = [
   {
-    name: "Chapter 5",
+    name: "Chapter 5: Interfaces and Abstract Classes",
+    videos: [
+      { title: "Java interface 🦅", url: "https://www.youtube.com/watch?v=GhslBwrRsnw&ab_channel=BroCode" },
+      { title: "Java abstraction 👻", url: "https://www.youtube.com/watch?v=Lvnb83qt57g&ab_channel=BroCode" },
+      { title: "Abstract Classes and Methods in Java Explained in 7 Minutes", url: "https://www.youtube.com/watch?v=HvPlEJ3LHgE&t=1s&ab_channel=CodingwithJohn" }
+    ],
     questions: [
       {
         question:
@@ -321,7 +326,11 @@ const chapters = [
   },
 
   {
-    name: "Chapter 6",
+    name: "Chapter 6: Java GUI and Event Handling",
+    videos: [
+      { title: "Java Swing GUI Tutorial", url: "https://www.youtube.com/watch?v=Kmgo00avvEw" },
+      { title: "Event Handling in Java", url: "https://www.youtube.com/watch?v=5o3fMLPY7qY" }
+    ],
     questions: [
       {
         question:
@@ -659,6 +668,10 @@ const chapters = [
   },
   {
     name: "Chapter 7",
+    videos: [
+      { title: "Java Exceptions and File IO", url: "https://www.youtube.com/watch?v=3u1fu6f8Hto" },
+      { title: "Serialization in Java", url: "https://www.youtube.com/watch?v=9UEHPiK53BA" }
+    ],
     questions: [{
     question: "What will the following code output?\n\ntry {\n  int a = 5 / 0;\n} catch (ArithmeticException e) {\n  System.out.println(\"Error\");\n}",
     options: ["0", "No output", "Error", "Compilation error"],
@@ -952,7 +965,7 @@ Student s = (Student) in.readObject();`,
     answer: 0
   }],
   },
-  { name: "Chapter 8", questions: [] },
+  { name: "Chapter 8", videos: [], questions: [] },
 ];
 
 let questions = [];
@@ -999,12 +1012,37 @@ function startChapterQuiz(chapterIdx) {
   score = 0;
   wrongAnswers = [];
   // Render a fresh quiz screen (not just update question)
+  let videoRowHtml = "";
+  const videos = chapters[chapterIdx].videos || [];
+  if (videos.length > 0) {
+    videoRowHtml = `<div id='chapter-videos-row-container' style='width:100%;margin-top:36px;'>
+      <div style='font-size:1.15em;font-weight:600;color:#2563eb;margin-bottom:10px;text-align:left;'>YouTube Videos that helped me!</div>
+      <div id='chapter-videos-row' style='display:flex;flex-direction:row;flex-wrap:nowrap;gap:24px;overflow-x:auto;padding-bottom:8px;'>
+        ${videos
+          .map(
+            (v) => {
+              // Extract YouTube video ID
+              const match = v.url.match(/[?&]v=([^&#]+)/) || v.url.match(/youtu.be\/(.+)$/);
+              const vid = match ? match[1] : "";
+              return `<div style='flex:0 0 340px;min-width:320px;max-width:420px;display:flex;flex-direction:column;align-items:center;background:#f8fafc;border-radius:10px;padding:10px 8px;'>
+                <div style='font-size:1em;font-weight:500;margin-bottom:8px;text-align:center;'>${v.title}</div>
+                <div style='aspect-ratio:16/9;width:100%;background:#eee;border-radius:8px;overflow:hidden;'>
+                  <iframe width='100%' height='100%' src='https://www.youtube.com/embed/${vid}' frameborder='0' allowfullscreen style='border:0;width:100%;height:100%;'></iframe>
+                </div>
+              </div>`;
+            }
+          )
+          .join("")}
+      </div>
+    </div>`;
+  }
   document.getElementById("quiz").innerHTML = `
     <button id="back-to-chapters" class="option-btn" style="width:auto;max-width:180px;margin-bottom:18px;">← Back to Chapters</button>
     <div id="scoreboard"></div>
     <div id="question"></div>
     <div id="options"></div>
     <div id="feedback"></div>
+    ${videoRowHtml}
   `;
   document.getElementById('back-to-chapters').onclick = showHomePage;
   showQuestion();
