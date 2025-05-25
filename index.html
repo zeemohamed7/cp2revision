@@ -61,6 +61,14 @@
       display: flex;
       gap: 3rem;
     }
+    #home-buttons {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: center;
+      margin-top: 24px;
+    }
     #main-content {
       flex: 3;
     }
@@ -206,8 +214,8 @@
     <p>Cause I don't want to study lol</p>
     <p>Created by <a href="https://github.com/zeemohamed7/">Zainab Mohamed</a></p>
   </footer>
-  <script src="quiz.js"></script>
-  <script>
+    <script type="module" src="quiz.js"></script>
+  <!-- <script>
     document.addEventListener("DOMContentLoaded", () => {
       const observer = new MutationObserver(() => {
         const grid = document.querySelectorAll(".question-nav button");
@@ -218,6 +226,6 @@
       const targetNode = document.getElementById("question");
       if (targetNode) observer.observe(targetNode, { childList: true });
     });
-  </script>
+  </script> -->
 </body>
 </html>
