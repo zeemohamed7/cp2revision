@@ -242,9 +242,9 @@ function showChaptersQuizzes() {
     }).join('');
 
     document.getElementById("quiz").innerHTML = `
+        <button id="back-to-home" class="option-btn" style="width:auto;max-width:180px;margin-bottom:18px;">← Back to Home</button>
         <h2>Select a Chapter</h2>
         <div id="chapter-btns">${chapterButtonsHtml}</div>
-        <button id="back-to-home" class="option-btn">← Back to Home</button>
     `;
 
     document.querySelectorAll(".chapter-btn").forEach((btn) => {
@@ -266,7 +266,7 @@ function startPracticeExam() {
     wrongAnswers = [];
 
     document.getElementById("quiz").innerHTML = `
-        <button id="back-to-home" class="option-btn">← Back to Home</button>
+        <button id="back-to-home" class="option-btn" style="width:auto;max-width:180px;margin-bottom:18px;">← Back to Home</button>
         <div id="scoreboard"></div>
         <div id="question"></div>
         <div id="options"></div>
